@@ -1,10 +1,11 @@
 const mysql = require('../mysql');
 
+
 exports.cadastrarBrinquedo = async (req, res) => {
     try {
         console.log('req.body:', req.body); 
         const resultado = await mysql.execute(
-            `INSERT INTO brinquedos (name, waiting_time, status, area) 
+            `INSERT INTO rides (name, waiting_time, status, area) 
             VALUES (?, ?, ?, ?)`,
             [
                 req.body.name,
@@ -20,6 +21,6 @@ exports.cadastrarBrinquedo = async (req, res) => {
 
     } catch (error) {
         console.error(error); 
-        return res.status(500).send({ error });
+        return res.status(500).send(error);
     }
 }
