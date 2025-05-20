@@ -93,6 +93,7 @@ exports.login = async (req, res) => {
             email: usuario[0].email,
             birth_date: usuario[0].birth_date,
             phone: usuario[0].phone,
+            admin: usuario[0].admin
         }, 'senhajwt');
         return res.status(201).send({ 
             "mensagem": "Usuario logado com sucesso!",
