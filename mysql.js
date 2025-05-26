@@ -4,7 +4,7 @@ const connection = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
     password: 'root',
-    port: 3307,
+    port: 3306  ,
     database: 'hopi_hari_db'
 });
 
