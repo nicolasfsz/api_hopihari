@@ -8,11 +8,11 @@ exports.atualizarUsuario = async (req, res,) => {
 
         const resultado = await mysql.execute(
             `update users 
-                set first_name = "?",
-                last_name = "?",
-                email = "?",
-                birth_date = "?",
-                phone = "?"
+                set first_name = ?,
+                last_name = ?,
+                email = ?,
+                birth_date = ?,
+                phone = ?
             where id = ?;`,
             [
                 req.body.first_name, 
